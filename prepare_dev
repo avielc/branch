@@ -4,3 +4,6 @@ sudo apt-get dist-upgrade -y
 sudo apt-get autoremove -y
 sudo apt-get install -y oracle-java8-installer oracle-java8-set-default
 sudo apt-get install -y subversion
+
+echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
+sudo apt-get install -y ttf-mscorefonts-installer

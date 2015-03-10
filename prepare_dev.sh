@@ -1,11 +1,18 @@
 cd ~
 echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
 sudo add-apt-repository -y ppa:webupd8team/java
+sudo apt-get update
 sudo apt-get dist-upgrade -y
 sudo apt-get autoremove -y
-sudo apt-get install -y oracle-java8-installer oracle-java8-set-default
 
-sudo apt-get update
+sudo apt-get install nautilus-open-terminal
+sudo apt-get install nautilus-actions
+
+sudo apt-get install -y oracle-java8-installer
+sudo apt-get install -y oracle-java8-set-default
+
+echo "" >> ~/.bashrc
+echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre/bin" >> ~/.bashrc
 
 sudo apt-get install -y subversion git vim
 sudo apt-get install -y p7zip-full iftop supervisor
@@ -34,3 +41,4 @@ sudo domainjoin-gui
 echo "RefreshUserCredentials false" > /tmp/lw1.txt
 sudo /usr/bin/lwconfig --file /tmp/lw1.txt
 rm /tmp/lw1.txt
+

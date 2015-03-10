@@ -7,7 +7,7 @@ sudo apt-get install -y oracle-java8-installer oracle-java8-set-default
 
 sudo apt-get update
 
-sudo apt-get install -y subversion git
+sudo apt-get install -y subversion git vim
 sudo apt-get install -y p7zip-full iftop supervisor
 
 # python related

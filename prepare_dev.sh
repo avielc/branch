@@ -29,3 +29,8 @@ sudo dpkg -i likewise-open_6.1.0.406-0ubuntu10_amd64.deb
 sudo dpkg -i libglade2-0_2.6.4-1ubuntu3_amd64.deb
 sudo dpkg -i likewise-open-gui_6.1.0.406-0ubuntu10_amd64.deb
 sudo domainjoin-gui
+
+# optional
+echo "RefreshUserCredentials false" > /tmp/lw1.txt
+sudo /usr/bin/lwconfig --file /tmp/lw1.txt
+rm /tmp/lw1.txt

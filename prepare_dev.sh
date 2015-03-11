@@ -16,10 +16,10 @@ echo 'export JAVA_HOME="/usr/lib/jvm/java-8-oracle/jre"' >> ~/.bashrc
 echo 'export PATH="$PATH:$JAVA_HOME:$JAVA_HOME/bin' >> ~/.bashrc
 
 sudo apt-get install -y subversion git vim
-sudo apt-get install -y p7zip-full iftop supervisor
+sudo apt-get install -y p7zip-full iftop
 
 # python related
-sudo apt-get install -y python-dev python-pip libxslt1-dev libxml2-dev python-couchdb lib32z1-dev libffi-dev libssl-dev python-openssl
+sudo apt-get install -y python-dev python-pip libxslt1-dev libxml2-dev python-couchdb lib32z1-dev libffi-dev libssl-dev python-openssl supervisor
 sudo pip install virtualenv virtualenvwrapper
 echo "" >> ~/.bashrc
 echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc

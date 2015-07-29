@@ -5,8 +5,8 @@ sudo apt-get update
 sudo apt-get dist-upgrade -y
 sudo apt-get autoremove -y
 
-sudo apt-get install nautilus-open-terminal
-sudo apt-get install nautilus-actions
+sudo apt-get install -y nautilus-open-terminal
+sudo apt-get install -y nautilus-actions
 
 sudo apt-get install -y oracle-java8-installer
 sudo apt-get install -y oracle-java8-set-default
@@ -42,6 +42,11 @@ sudo dpkg -i likewise-open_6.1.0.406-0ubuntu10_amd64.deb
 sudo dpkg -i libglade2-0_2.6.4-1ubuntu3_amd64.deb
 sudo dpkg -i likewise-open-gui_6.1.0.406-0ubuntu10_amd64.deb
 sudo domainjoin-gui
+
+# more login stuff
+sudo echo "" >> /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf
+sudo echo "allow-guest=false" >> /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf
+sudo echo "greeter-show-manual-login=true" >> /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf
 
 # optional
 echo "RefreshUserCredentials false" > /tmp/lw1.txt

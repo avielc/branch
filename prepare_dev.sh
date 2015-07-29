@@ -13,7 +13,7 @@ sudo apt-get install -y oracle-java8-set-default
 
 echo "" >> ~/.bashrc
 echo 'export JAVA_HOME="/usr/lib/jvm/java-8-oracle/jre"' >> ~/.bashrc
-echo 'export PATH="$PATH:$JAVA_HOME:$JAVA_HOME/bin' >> ~/.bashrc
+echo 'export PATH="$PATH:$JAVA_HOME:$JAVA_HOME/bin"' >> ~/.bashrc
 
 sudo apt-get install -y subversion git vim
 sudo apt-get install -y p7zip-full iftop

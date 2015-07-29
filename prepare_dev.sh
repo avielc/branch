@@ -29,10 +29,15 @@ source /usr/local/bin/virtualenvwrapper.sh
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
 sudo apt-get install -y ttf-mscorefonts-installer
 
-# likewise-open
-wget http://de.archive.ubuntu.com/ubuntu/pool/main/l/likewise-open/likewise-open_6.1.0.406-0ubuntu10_amd64.deb
-wget http://de.archive.ubuntu.com/ubuntu/pool/main/libg/libglade2/libglade2-0_2.6.4-1ubuntu3_amd64.deb
-wget http://de.archive.ubuntu.com/ubuntu/pool/universe/l/likewise-open/likewise-open-gui_6.1.0.406-0ubuntu10_amd64.deb
+# mount to our NAS
+sudo apt-get install -y cifs-utils
+sudo mkdir -p /mnt/lspub
+
+# get our own copy of likewise-open binaries
+sudo mount.cifs -o user=aviel //nas1/public /mnt/lspub
+cp /mnt/lspub/Apps/Ubuntu/*.deb .
+
+# install likewise-open
 sudo dpkg -i likewise-open_6.1.0.406-0ubuntu10_amd64.deb
 sudo dpkg -i libglade2-0_2.6.4-1ubuntu3_amd64.deb
 sudo dpkg -i likewise-open-gui_6.1.0.406-0ubuntu10_amd64.deb

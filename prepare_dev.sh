@@ -29,6 +29,9 @@ source /usr/local/bin/virtualenvwrapper.sh
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
 sudo apt-get install -y ttf-mscorefonts-installer
 
+# anti virus
+sudo apt-get install -y calmav calmtk
+
 # mount to our NAS
 sudo apt-get install -y cifs-utils
 sudo mkdir -p /mnt/lspub
@@ -44,9 +47,9 @@ sudo dpkg -i likewise-open-gui_6.1.0.406-0ubuntu10_amd64.deb
 sudo domainjoin-gui
 
 # more login stuff
-sudo echo "" >> /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf
-sudo echo "allow-guest=false" >> /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf
-sudo echo "greeter-show-manual-login=true" >> /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf
+echo "" >> /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf
+echo "allow-guest=false" >> /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf
+echo "greeter-show-manual-login=true" >> /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf
 
 # optional
 echo "RefreshUserCredentials false" > /tmp/lw1.txt

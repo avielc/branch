@@ -29,9 +29,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
 sudo apt-get install -y ttf-mscorefonts-installer
 
-# anti virus
-sudo apt-get install -y calmav calmtk
-
 # mount to our NAS
 sudo apt-get install -y cifs-utils
 sudo mkdir -p /mnt/lspub
